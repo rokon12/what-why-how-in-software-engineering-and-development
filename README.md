@@ -1,2 +1,5 @@
-# what-why-how-in-software-engineering-and-development
-An attempt to answer some History Questions related to software engineerign and development 
+# What why & how in Software Engineering And Development
+
+**An attempt to answer some History Questions related to software engineerign and development**
+
+
