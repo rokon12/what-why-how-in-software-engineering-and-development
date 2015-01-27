@@ -184,7 +184,7 @@ Interestingly we can increment the pointer also.
 	printf("%d, %d \n", a, b);
 ```
 
-Now in a we have 2nd value and in b we have 3rd value. 
+Here, `arr + 1` is now 4 bytes after arr and `arr + 2` is 8 bytes afterwards and so `a` we have 2nd value and in` b` we have 3rd value. 
 
 So we can do a little arithmetic here. 
 
@@ -194,7 +194,7 @@ Normally we get the value of an array using index- like
 arr[i].
 ```
 
-Do you know, however, the arr[i] is defined using pointer arithmetic.
+Basically `arr[i]` is defined using pointer arithmetic.
 
 Think this way-
 
@@ -208,12 +208,22 @@ or,
     p[i] =  *(p + i) 
 ```
 
-Here is the interesting fact..  when it increments, it increments to the next element, not the next byte
+ Fact is..  when it increments, it increments to the next element, not the next byte
 
-p has no idea about the array but it knows that it points to an integer. 
+`p` has no idea about the array but it knows that it points to an integer. 
 So compilers knows how to update the value. 
 
- 
+> In C, a pointer is not only an address, but also it  tells you what the data type at the address is.
+
+So we can come up with a formula now : - 
+
+If we want to compute address of `arr + i` where `arr` has type `T *` then the formula for the address is:
+
+    addr( arr + i ) = addr( arr ) + [ sizeof( T ) * i ]
+
+Here `T`  is a pointer. 
+
+
 Now that we know how array works like pointer, lets re-write the for loop; 
 
 ```c
