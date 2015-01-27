@@ -62,8 +62,9 @@ Lets print the value of I and j and see what they are-
 > Output: i = 2458,  j = 1234 
 
 
-Now  that we know what is a pointer .  Lets move forward. 
+-----------------
 
+Now  that we know what is a pointer .  Lets move forward. 
 
 Pointer gets more interesting in arrays. 
 
@@ -110,7 +111,7 @@ Thats easy.
 
 There is a sizeof operator in C. We can use that to get the size of an array. 
 
-```
+```c
 	int size = sizeof(arr);
 ```
 
@@ -188,6 +189,7 @@ Now in a we have 2nd value and in b we have 3rd value.
 So we can do a little arithmetic here. 
 
 Normally we get the value of an array using index- like 
+
 ```c
 arr[i].
 ```
@@ -199,9 +201,11 @@ Think this way-
 ```c
     arr[i] = *(arr + i) 
 ```
+
 or,
+
 ```c
-    p[i] =  *(p + I) 
+    p[i] =  *(p + i) 
 ```
 
 Here is the interesting fact..  when it increments, it increments to the next element, not the next byte
@@ -227,7 +231,9 @@ Now that we know how array works like pointer, lets re-write the for loop;
 
 Here `*end` is a pointer of a address pointing to the end of the array and we can loop through the array until it gets to the end of the array and every time we just increment the pointer and dereference it to get the value. 
 
-Here things can go terribly wrong if we just mess up with the math.
+-----------------
+
+Here things can go terribly wrong if we just mess up with the math. Its extremely powerful and dangerous as well. 
 
 We have  covered array and pointer arithmetic. But we need to know something that is little tricky.
 
