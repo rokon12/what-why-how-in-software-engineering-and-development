@@ -1,13 +1,13 @@
 
 I asked a question in the JugBD group that why in C a function that takes a array as an argument, it also takes the size of the array as an additional argument, but we don't see this usually in other languages like Java. 
 
+Here is the link of the question:  https://www.facebook.com/groups/jugbd/permalink/821539027892784/
 
-After digging and studying a while, I found the answer.  I'm going to explain everything I understand, so it might be a big post. 
+After digging and studying a little and also from the comments of the answer in the facebook, I've got my answer.  I'm going to explain everything I understand,  so it might be a big post. 
 
+We all know that a computer memory is just a long sequence of byte.  There aren't really any floating point numbers, integer or strings. They are just plain and simple bytes. A whole lot of bytes.  We use language like `C` to work on those bytes. The langauge imposes some structure or way out to work on those bytes.   
 
-A computer memory is just a long sequence of byte.  There aren't really any floating point numbers, integer or strings. They are just bytes. A whole lot of bytes.  Language like C works on these bytes. It imposes some structure or way out to work on those bytes.   
-
-We do abstract things over the 1's and 0's. 
+We just abstract things over the bunch of 1's and 0's.  We do creepy stuff, thats okay, lets just admit it for now. 
 
 So basically we have memory in RAM and  processor maps them to a flat address space. 
 
