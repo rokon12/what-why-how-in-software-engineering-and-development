@@ -3,7 +3,7 @@ I asked a question in the JugBD group that why in C a function that takes a arra
 
 Here is the link of the question:  https://www.facebook.com/groups/jugbd/permalink/821539027892784/
 
-After digging and studying a little and also from the comments of the answer in the facebook, I've got my answer.  I'm going to explain everything I understand,  so it might be a big post. 
+After digging and studying a little and also from the comments of the answer in the facebook, I've got my answer.  I'm going to explain everything I understand here,  so it might be a big post. 
 
 We all know that a computer memory is just a long sequence of byte.  There aren't really any floating point numbers, integer or strings. They are just plain and simple bytes. A whole lot of bytes.  We use language like `C` to work on those bytes. The langauge imposes some structure or way out to work on those bytes.   
 
@@ -13,20 +13,25 @@ So basically we have memory in RAM and  processor maps them to a flat address sp
 
  Now lets check a simple example - 
 
+```c
 	int i = 1234;
+```
 
-Here we've declared an integer which holds a value.  Here I'm telling to the compiler to set some byte to the memory with a name 'I' and treat it as an integer. 
+We've declared an integer which holds a value.  Here I'm telling to the compiler to set some byte to the memory with a name `i` and treat it as an integer. 
 
-What we can do now? It has an address in the address space. Right ? We want to locate where does this variable reside in the long sequence of memory in the computer. The address is just a number which points the first byte in  memory holding the value of this variable. 
+So what we can do now? It has an address in the address space. Right ? We want to know where does this variable reside in the long sequence of memory in the computer (_As a human, we have an insatiable curiosity to know everything_) . Well, the address is just a number which points the first byte in  memory holding the value of this variable. 
 
-Lets print the address. 
+Lets print the address (_We are adventurous too_) . 
 
-    printf("%p\n", &i); //0x7fffac4b5cc0
+```c
+    printf("%p\n", &i);
+```
+
+> Output: 0x7fffac4b5cc0
 
 Although its platform specific. 
 
-
-However, we don't really want to print the address always, rather we want a pointer of that address. 
+However, we don't really want to print the address always, rather we want a pointer of that address (). 
 
      int * p = &i;
 
