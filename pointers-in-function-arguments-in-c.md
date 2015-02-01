@@ -90,7 +90,7 @@ We can access the elements of the array using the zero based index in to array.
 	printf("%d\n", arr[0]);
 ```
 
-Thats the first element of the array.  How about printing them all- Lets do it using a for loop. 
+Thats the first element of the array.  How about printing them all- Lets do it using a for loop (_Let me iterate over the array, I know that I'm creepy_). 
 
 ```c
 	for (int i = 0; i < 5; ++i) {
@@ -98,12 +98,13 @@ Thats the first element of the array.  How about printing them all- Lets do it u
 	}
 ```
 
-Now we can have an array with a thousands elements. This for loop can work for that just fine. 
-But there is still a problem.
+Now we can have an array with a thousands elements. This for loop can work for that just fine.(_Well, Im not that creepy, so skipping the iteration over thousands elements for now_)
+
+But hey, there is still a problem (_We create problems and then sell the solutions, how creepy we are!!_).
 
 We need to manually change the for loop to indicate how many elements in the array. 
 
-The problem with array is, it does not carry  runtime information at all. That means there is no way to tell who many elements in the array in the runtime.  
+The problem with array is, it does not carry  runtime information at all. That means there is no way to tell how many elements in the array in the runtime.  
 
 The only way to do that is, capture the size of array in the compiled time. 
 
@@ -115,11 +116,11 @@ There is a sizeof operator in C. We can use that to get the size of an array.
 	int size = sizeof(arr);
 ```
 
-but the problem with the sizeof is, it gives me the total byte of the array, but im interested to get the total elements of the array not the total byte it takes. 
+but the problem with the `sizeof` is, it gives me the total byte of the array, but I'm rather interested to get the total elements of the array not the total byte it takes. 
 
-We know that compilers know about the size of an integer. If integer takes 4 byte, it should be 20 bytes. 
+We know that compiler knows about the size of an integer. If integer takes 4 byte, it should be 20 bytes. 
 
- So I can get the size of array like this - 
+ So I can calculate the size of array with simple math ( _ah, I'm extreamly good at math_)- 
 
 ```c
 	int size = sizeof(arr)/ sizeof(int);
@@ -141,7 +142,7 @@ So now my loop looks like this-
 	}
 ```
 
-Well, enough of array , lets move on and find out how array is related to the pointer. 
+Well, enough of array , lets move on and find out how array is related to the pointer (_ah, I love my life, I know now how pointer looks like)_ . 
 
 Here is an interesting fact , that is in C an array variable is also a pointer.
 
@@ -157,9 +158,9 @@ For example -
 	}
 ```
 
-it works just fine. 
+It works just fine. 
 
-Now we can dereference the pointer. Lets see how we can do that. 
+Now we can dereference the pointer. Let's see how we can do that. 
 
 ```c
 	int arr[5] = { 1, 2, 3, 4, 5 };
@@ -169,7 +170,7 @@ Now we can dereference the pointer. Lets see how we can do that.
 	int b = * arr;
 ```
 
-Now if we print the a and b, we will get the first value of the array. 
+Now if we print the `a` and `b`, we will get the first value of the array. 
 
 Interestingly we can increment the pointer also. 
 
@@ -243,11 +244,11 @@ Here `*end` is a pointer of a address pointing to the end of the array and we ca
 
 -----------------
 
-Here things can go terribly wrong if we just mess up with the math. Its extremely powerful and dangerous as well. 
+Here things can go terribly wrong if we just mess up with the math ( _Don't do this if you are not good at elementary math_). Its extremely powerful and dangerous as well. 
 
 We have  covered array and pointer arithmetic. But we need to know something that is little tricky.
 
-Using sizeof operator, we can determine the size of an array. But we can do it only when it is applied to a variable. 
+Using `sizeof` operator, we can determine the size of an array. But we can do it only when it is applied to a variable. 
 
 For example - 
 
@@ -260,11 +261,11 @@ For example -
 
 > Output:  sizeof(arr) = 20, sizeof(p) = 8
 
-So we can see that, when sizeof arr is 20  and the  sizeof p is only 8. 
+So we can see that, when `sizeof` `arr` is 20  and the  `sizeof` `p` is only 8. 
 
-Here 8 is not the number of byte it requires to allocate an integer, rather, number of byte requires for one address.  As using 64 bit machine , thats why it is 8.
+Here `8` is not the number of byte it requires to allocate an integer, rather, number of byte requires for one address.  As I'm using 64 bit machine , thats why it is 8.
 
-The pointer p can do as much the arr variable can do, but it does not carrry the compiled time information. It has no idea how long the array is. 
+The pointer `p` can do as much the `arr `variable can do, but it does not carrry the compiled time information. It has no idea how long the array is. 
 
 So when we pass an array to a function, we have only choice to pass it as a pointer. 
 Lets say we have a function - 
