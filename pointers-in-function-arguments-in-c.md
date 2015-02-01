@@ -185,7 +185,7 @@ Interestingly we can increment the pointer also.
 	printf("%d, %d \n", a, b);
 ```
 
-Here, `(arr + 1)` is now 4 bytes after arr and `(arr + 2)` is 8 bytes afterwards and so `a` we have 2nd value and in` b` we have 3rd value. 
+Here, `*(arr + 1)` is now 4 bytes after arr and `*(arr + 2)` is 8 bytes afterwards and so `a` we have 2nd value and in` b` we have 3rd value. 
 
 So we can do a little arithmetic here. 
 
