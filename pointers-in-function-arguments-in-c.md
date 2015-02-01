@@ -305,7 +305,7 @@ Ah finally I'm incredibly excited to complete the tutorial!
 
 ## TL;DR
 
-In `C` array works like a pointer, so array is always passed to method as a pointer.
+In `C` array works like a pointer, so array is always passed to a method as a pointer.
  
 The only difference from a proper pointer is that you can not re-assign it. So in runtime, there is no way to know about the size of the given pointer. 
 
