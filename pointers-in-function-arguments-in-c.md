@@ -110,17 +110,17 @@ The only way to do that is, capture the size of array in the compiled time.
 
 Thats easy.  
 
-There is a sizeof operator in C. We can use that to get the size of an array. 
+There is a `sizeof` operator in `C`. We can use that to get the size of an array. 
 
 ```c
 	int size = sizeof(arr);
 ```
 
-but the problem with the `sizeof` is, it gives me the total byte of the array, but I'm rather interested to get the total elements of the array not the total byte it takes. 
+But the problem with the `sizeof` is, it gives me the total byte of the array, but I'm rather interested to get the total elements of the array not the total byte it takes. 
 
 We know that compiler knows about the size of an integer. If integer takes 4 byte, it should be 20 bytes. 
 
- So I can calculate the size of array with simple math ( _ah, I'm extreamly good at math_)- 
+So I can calculate the size of array with simple math ( _ah, I'm extreamly good at math_)- 
 
 ```c
 	int size = sizeof(arr)/ sizeof(int);
@@ -142,9 +142,9 @@ So now my loop looks like this-
 	}
 ```
 
-Well, enough of array , lets move on and find out how array is related to the pointer (_ah, I love my life, I know now how pointer looks like)_ . 
+Well, enough of array , lets move on and find out how array is related to the pointer (_ah, I love my life, I know now how pointer looks like-- it looks like asterisk (*) totally! trust me!)_ . 
 
-Here is an interesting fact , that is in C an array variable is also a pointer.
+Here is an interesting fact, that is in `C` an array variable is also a pointer.
 
 For example - 
 
@@ -225,7 +225,7 @@ If we want to compute address of `arr + i` where `arr` has type `T *` then the f
 Here `T`  is a pointer. 
 
 
-Now that we know how array works like pointer, lets re-write the for loop; 
+Now that we know how array works like pointer, lets re-write the for loop-  ( _We'll be safe enough once we make the jump to hyperspace_) 
 
 ```c
 	int arr[5] = { 1, 2, 3, 4, 5 };
@@ -244,9 +244,9 @@ Here `*end` is a pointer of a address pointing to the end of the array and we ca
 
 -----------------
 
-Here things can go terribly wrong if we just mess up with the math ( _Don't do this if you are not good at elementary math_). Its extremely powerful and dangerous as well. 
+Here things can go terribly wrong if we just mess up with the math ( _Don't do this if you are terribly bad at elementary math_). Its extremely powerful and dangerous as well. 
 
-We have  covered array and pointer arithmetic. But we need to know something that is little tricky.
+We have  covered array and pointer arithmetic. But we need to know something that is little tricky (_Life is messy, Ren. It's not easy and it's definitely not for the timid_).
 
 Using `sizeof` operator, we can determine the size of an array. But we can do it only when it is applied to a variable. 
 
@@ -271,7 +271,7 @@ So when we pass an array to a function, we have only choice to pass it as a poin
 Lets say we have a function - 
 
 ```c
-	void foo(int * array){}
+	void foo(int * array){    }
 ```
 
 We can pass the actual array or the pointer, it doesn't matter what we do, it is always passed as a pointer. 
