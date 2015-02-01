@@ -297,7 +297,18 @@ Here is an option, we can pass the size of the array as an additional argument .
 
 Now the caller is compelled to provide the size.
 
-Thats why we in C programming language, when we see a function that takes an array or a pointer, it also takes a  size as an additional argument. 
+Thats why we in `C`, when we see a function that takes an array or a pointer, it also takes a size as an additional argument. 
 
 
-Thats for today. 
+Ah finally I'm incredibly excited to complete the tutorial! 
+
+
+## TL;DR
+
+In `C` array works like a pointer, so array is always passed to method as a pointer.
+ 
+The only difference from a proper pointer is that you can not re-assign it. So in runtime, there is no way to know about the size of the given pointer. 
+
+Thats why in `C`, when we see a function that takes an array or a pointer, it also takes a size as an additional argument and  the caller is compelled to provide the size.
+
+
