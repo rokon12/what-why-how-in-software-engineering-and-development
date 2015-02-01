@@ -284,7 +284,7 @@ We can pass the actual array or the pointer, it doesn't matter what we do, it is
 	foo(p);
 ```
 
-So here we have got our problems-
+So here we have got our problem-
 
 In this foo function , there is no way to know about the size of the given pointer. 
  
