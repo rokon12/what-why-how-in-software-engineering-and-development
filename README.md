@@ -1,6 +1,6 @@
-# What, Why & How in Software Engineering And Development
+# What, Why & How in Software Engineering & Development
 
-**An attempt to answer some History Questions related to software engineerign and development**
+**An attempt to answer some questions related to software engineerign and development**
 
 
 ##  What is an Enterprise Application?
