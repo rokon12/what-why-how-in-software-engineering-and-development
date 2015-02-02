@@ -1,5 +1,5 @@
 
-I asked a question in the JugBD group that why in C a function that takes a array as an argument, it also takes the size of the array as an additional argument, but we don't see this usually in other languages like Java. 
+I asked a question in the JugBD group that why in C a function that takes an array as an argument, it also takes the size of the array as an additional argument, but we don't see this usually in other languages like Java. 
 
 Here is the link of the question:  https://www.facebook.com/groups/jugbd/permalink/821539027892784/
 
